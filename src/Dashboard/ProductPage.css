@@ -1,0 +1,114 @@
+/* Page Heading */
+h1 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+
+/* Product Grid Container */
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 🖥️ Desktop - 3 Columns */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Product Card */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Image */
+.product-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Product Title */
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Description */
+.description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* Price */
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* Buy Button */
+.buy-button {
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+  background: #0056b3;
+}
+
+/* 🔹 Responsive Design 🔹 */
+
+/* 🖥️ Medium Screens (Tablets) - 2 Columns */
+@media (max-width: 1024px) {
+  .product-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 📱 Small Screens (Mobile) - 1 Column */
+@media (max-width: 600px) {
+  .product-container {
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+  h1 {
+      font-size: 28px;
+  }
+
+  .title {
+      font-size: 16px;
+  }
+
+  .description {
+      font-size: 13px;
+  }
+
+  .price {
+      font-size: 18px;
+  }
+}
